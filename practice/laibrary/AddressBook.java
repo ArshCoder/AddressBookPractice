@@ -95,4 +95,16 @@ public class AddressBook {
 			}
 		}
 	}
+
+	public void remove(String firstName1) {
+		for (int i = 0; i < contacts.size(); i++) {
+			PersonInfo p = (PersonInfo) contacts.get(i);
+			if (firstName1.equals(p.firstName)) {
+				contacts.remove(i);
+				System.out.println(p);
+			}
+		}
+
+	}
+
 }
