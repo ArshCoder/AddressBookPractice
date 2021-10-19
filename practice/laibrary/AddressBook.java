@@ -106,5 +106,29 @@ public class AddressBook {
 		}
 
 	}
+	public void newContact() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter FirstName: ");
+		String firstName = scanner.nextLine();
+		System.out.println("Enter LastName: ");
+		String lastName = scanner.nextLine();
+		System.out.println("Enter addres: ");
+		String address = scanner.nextLine();
+		System.out.println("Enter city: ");
+		String city = scanner.nextLine();
+		System.out.println("Enter state: ");
+		String state = scanner.nextLine();
+		System.out.println("Enter zip: ");
+		String zip = scanner.nextLine();
+		System.out.println("Enter phone number: ");
+		String phoneNumber = scanner.nextLine();
+		System.out.println("Enter email: ");
+		String email = scanner.nextLine();
+		scanner.close();
+		PersonInfo addNewPerson = new PersonInfo(firstName, lastName, city, address, state, zip, phoneNumber, email);
+		contacts.add(addNewPerson);
+		System.out.println(addNewPerson);
+
+	}
 
 }
