@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import java.util.Scanner;
 
-import com.practice.PersonInfo;
+
 
 public class AddressBook {
 	ArrayList<PersonInfo> contacts = new ArrayList<PersonInfo>();
@@ -128,6 +128,27 @@ public class AddressBook {
 		PersonInfo addNewPerson = new PersonInfo(firstName, lastName, city, address, state, zip, phoneNumber, email);
 		contacts.add(addNewPerson);
 		System.out.println(addNewPerson);
+
+	}
+	
+	public void NewAddressBook() {
+		Scanner s = new Scanner(System.in);
+        System.out.print("How many books do you want to create? ");
+        int howManyBooks;
+        int howManyEntries;
+
+        PersonInfo newAddressBook = new PersonInfo(null, null, null, null, null, null, null, null);
+
+
+        while(true){
+            howManyBooks = s.nextInt();
+            if (howManyBooks>0){
+                PersonInfo person = new PersonInfo(null, null, null, null, null, null, null, null);                   //This code decides how many books are in the array of books/the library
+                break;
+            }
+            else System.out.print("You must create at least 1 book.");
+            }
+
 
 	}
 
